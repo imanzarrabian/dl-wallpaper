@@ -2,10 +2,15 @@ import requests
 from random import randint
 import urllib
 import time
+import sys
 
 
 wallpaper_source = " https://api.desktoppr.co/1/users/"
-auth_token = "bD-6KXSig7G-4x-TctpS"
+
+#replace by your auth_token
+auth_token = ""
+
+#replace by users you like on desktoppr.co
 user_worth_looking = ["sutto", "vertis", "gotmug"]
 
 def get_random_wallpaper_from_user(username):
@@ -19,6 +24,10 @@ def get_random_wallpaper_from_user(username):
         print r.text
         sys.exit("GET /wallpaper/random response not parsed")
 
+
+if auth_token == "":
+    print "Need auth_token from Desktoppr"
+    sys.exit()
 
 # get a random user
 index = randint(0, 1)
