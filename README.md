@@ -1,6 +1,6 @@
 # dl-wallpaper
 
-##Usage : 
+## Usage : 
 ```shell
 python dl-wallpaper.py
 ```
